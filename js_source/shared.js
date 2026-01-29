@@ -18,6 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
             navCloseBtn.addEventListener('click', () => {
                 nav.classList.remove('nav-active');
             });
+
+            // Close the navigation menu when a link is clicked
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('nav-active');
+                });
+            });
         }
     };
 
