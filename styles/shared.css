@@ -1,0 +1,218 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* A light background for the page body */
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #424242;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    overflow: hidden; /* Prevents content from spilling out */
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 80px; /* Adjust this value to get the perfect size */
+    vertical-align: middle; /* Ensures the image aligns nicely with any adjacent text or elements */
+}
+
+/* Navigation Menu Styles */
+.main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+.main-nav ul li a:hover {
+    background-color: transparent;
+    color: #cccccc;
+}
+
+/* Mobile Menu Buttons (Hamburger and Close) */
+.nav-open-btn,
+.nav-close-btn {
+    display: none; /* Hidden on desktop by default */
+}
+
+/* Mobile Styles using Media Query */
+@media (max-width: 767px) {
+    .logo img {
+        height: 100px; /* Larger logo for mobile view */
+    }
+
+    /* Show mobile-only buttons */
+    .nav-open-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Styles for the slide-out navigation panel */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* This class is added by JavaScript to show the menu */
+    .main-nav.nav-active {
+        transform: translateX(0);
+    }
+
+    .logo img {
+        height: 70px; /* Adjust this value to get the perfect size */
+        vertical-align: middle; /* Ensures the image aligns nicely with any adjacent text or elements */
+    }
+
+    .main-nav ul {
+        display: block; /* Stack nav items vertically */
+        padding-top: 60px;
+    }
+
+    .main-nav ul li a {
+        padding: 15px 20px;
+    }
+
+    .main-nav ul li a:hover {
+        background-color: #575757;
+        color: white; /* Keep text color consistent on hover */
+    }
+
+    .nav-close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+/* Footer Styles */
+.main-footer {
+    background-color: #f8f9fc;
+    color: #333; /* Dark text for light background */
+    padding: 40px 20px; /* Increased padding for better spacing */
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Adds space between the columns */
+}
+
+.footer-left, .footer-right {
+    flex: 1; /* Each column takes up equal space */
+    min-width: 300px; /* Prevents columns from getting too narrow */
+}
+
+.footer-left h2{
+    color: #d32f2f; /* Theme color for titles */
+    margin-top: 0;
+    font-size: 48px;
+}
+
+.main-footer p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.main-footer a {
+    color: #d32f2f; /* Use theme color for links */
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.footer-right button {
+    background-color: #d32f2f; /* Theme color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-right button:hover {
+    background-color: #b71c1c; /* A slightly darker shade for hover */
+}
+
+/* Responsive adjustments for the footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
