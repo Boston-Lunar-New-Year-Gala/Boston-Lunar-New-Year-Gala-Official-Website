@@ -1,0 +1,290 @@
+#about-hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    background-image: url('../images/tupian10.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#about-hero h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-family: "Great Vibes", cursive;
+    font-size: 4rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Header Overlap Styles */
+#header-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow: visible;
+}
+
+#header-placeholder .main-header {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Fix Header Icons Color */
+#header-placeholder .fa-bars,
+#header-placeholder .fa-times,
+#header-placeholder .menu-toggle,
+#header-placeholder .close-btn,
+#header-placeholder .dropdown-toggle {
+    color: #ffffff !important;
+}
+
+/* Ensure dropdown menu is clickable on mobile */
+#header-placeholder .dropdown-menu,
+#header-placeholder .sub-menu {
+    z-index: 1001;
+    pointer-events: auto;
+}
+
+/* Citations Section Styles */
+#citations {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section-header .underline {
+    width: 80px;
+    height: 3px;
+    background-color: #d32f2f;
+    margin: 10px auto;
+}
+
+/* Citations Content Styles */
+.citations-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Left and Right Citation Sections */
+.citation-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.citation-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.citation-left p {
+    text-align: justify;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.citation-left img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.citation-right img {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .citations-content {
+        flex-direction: column;
+    }
+}
+
+/* Program Section Styles */
+#program {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.program-container {
+    display: flex;
+    justify-content: center;
+}
+
+.program-container img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+}
+
+/* Address and Parking Section */
+#address-parking {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center; /* Center the content */
+}
+
+.guide-subsection {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.guide-subsection h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #d32f2f;
+}
+
+/* Zig-Zag Layout */
+.zigzag-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.zigzag-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.zigzag-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.zigzag-text h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.zigzag-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.zigzag-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.zigzag-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.grid-item {
+    text-align: justify;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.grid-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Mobile Responsive for ZigZag */
+@media (max-width: 768px) {
+    .zigzag-item, .zigzag-item:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .zigzag-text, .zigzag-image {
+        width: 100%;
+    }
+}
+
+/* Sponsors Section Styles */
+#sponsors {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sponsors-container img {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+}
